@@ -2,9 +2,12 @@ const questions = require("/Users/katelynncowan/Desktop/Bootcamp/UTA-AUS-FSF-PT-
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
+console.log(questions);
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  inquirer.prompt
+  return `# ${name.title}
   ## Table of Contents
     ### ${createQuestions}
 
