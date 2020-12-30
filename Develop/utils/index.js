@@ -94,9 +94,13 @@ let createMd = (title, description, installation, usage, license, contribution, 
 inquirer
   .prompt(questions)
   .then(answers => {
-
+    // Destructure object of questions
+    const { title, description, installation, usage, license, contribution, tests, github, email } = answers;
+    // Calling createMd function and passing arguments
+    const template = createMd(title, description, installation, usage, license, contribution, tests, github, email);
+    // Writes readme.md file
     fs.writeFile('README.md', template, (err) => {
       if (err) throw err;
       console.log('file has been saved');
     });
-  }
+  });
