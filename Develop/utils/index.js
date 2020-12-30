@@ -98,9 +98,12 @@ inquirer
     const { title, description, installation, usage, license, contribution, tests, github, email } = answers;
     // Calling createMd function and passing arguments
     const template = createMd(title, description, installation, usage, license, contribution, tests, github, email);
-    // Writes readme.md file
+    //Writes file using user input
     fs.writeFile('README.md', template, (err) => {
       if (err) throw err;
       console.log('file has been saved');
     });
+  })
+  .catch(error => {
+    console.log(error)
   });
