@@ -59,35 +59,35 @@ let questions = [
 let createMd = (title, description, installation, usage, license, contribution, tests, github, email) => {
   return `# ${title} 
   ## Table of Contents
-  ## 1. Description
-  ### 2. Installation
-  ### 3. Usage
-  ### 4. License
-  ### 5. Contribution
-  ### 6. Tests
-  ### 7. Questions
+    1. Description
+    2. Installation
+    3. Usage
+    4. License
+    5. Contribution
+    6. Tests
+    7. Questions
 
   ##  Description
-  ### ${description}
+   ${description}
         
   ## Installation
-  ### ${installation}
+   ${installation}
         
   ## Usage
-  ### ${usage}
+   ${usage}
         
   ## License 
-  ### ${license}
+   ${license}
         
   ## Contributions
-  ### ${contribution}
+   ${contribution}
         
   ## Tests
-  ### ${tests}
+   ${tests}
         
   ## Questions
-  ### ${email}
-  ### ${github}
+   ${email}
+   ${github}
         `;
 }
 
