@@ -1,101 +1,92 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
-const generateMarkdown = require('./generateMarkdown');
-const answers = [];
-const writeFileAsync = util.promisify(fs.writeFile);
 
-// array of questions for user
-const createQuestions = () =>
-  inquirer.prompt([
-    {
-      type: "input",
-      message: "What is the name of your project?",
-      name: "title"
-    },
-    {
-      type: "input",
-      message: "How would you describe your project?",
-      name: "description"
-    },
-    {
-      type: "input",
-      message: "What packages are installed or need to be installed?",
-      name: "installation"
-    },
-    {
-      type: "input",
-      message: "How would you and other developers use this application?",
-      name: "usage"
-    },
-    {
-      type: "input",
-      message: "Are there any licenses you'd like to include?",
-      name: "license"
-    },
-    {
-      type: "input",
-      message: "Who contributed to this project?",
-      name: "contribution"
-    },
-    {
-      type: "input",
-      message: "Are there any tests included in this application?",
-      name: "tests"
-    },
-    {
-      type: "input",
-      message: "Please provide a link to your GitHub.",
-      name: "github"
-    },
-    {
-      type: "input",
-      message: "What is your email, associated with your GitHub account?",
-      name: "email"
-    },
-  ]);
+// Questions for User
+let questions = [
+  {
+    type: "input",
+    message: "What is the name of your project?",
+    name: "title"
+  },
+  {
+    type: "input",
+    message: "How would you describe your project?",
+    name: "description"
+  },
+  {
+    type: "input",
+    message: "What packages are installed or need to be installed?",
+    name: "installation",
+    default: "No additional packages are needed to install"
+  },
+  {
+    type: "input",
+    message: "How would you and other developers use this application?",
+    name: "usage"
+  },
+  {
+    type: "input",
+    message: "Are there any licenses you'd like to include?",
+    name: "license",
+    default: "No licenses to include"
+  },
+  {
+    type: "input",
+    message: "Who contributed to this project?",
+    name: "contribution",
+    default: "No additional contributions"
+  },
+  {
+    type: "input",
+    message: "Are there any tests included in this application?",
+    name: "tests",
+    default: "No tests included in this application"
+  },
+  {
+    type: "input",
+    message: "Please provide a link to your GitHub.",
+    name: "github",
+    default: "I don't have a github"
+  },
+  {
+    type: "input",
+    message: "What is the email address associated with your GitHub account?",
+    name: "email",
+    default: "I do not have an email",
+  },
+]
+// Function and Template to generate a README.md file
+let createMd = (title, description, installation, usage, license, contribution, tests, github, email) => {
+  return `# ${title} 
+  ## Table of Contents
+  ## 1. Description
+  ### 2. Installation
+  ### 3. Usage
+  ### 4. License
+  ### 5. Contribution
+  ### 6. Tests
+  ### 7. Questions
 
-function generateReadMe(answers) {
-  return `# ${answers.title}
-      ## Table of Contents
-        ### ${createQuestions}
-    
-      ##  Description
-        ###  ${answers.description}
-      
-      ## Installation
-        ### ${answers.installation}
-      
-      ## Useage
-        ### ${answers.usage}
-      
-      ## License 
-        ### ${answers.license}
-      
-      ## Contributions
-        ### ${answers.contribution}
-      
-      ## Tests
-        ### ${answers.tests}
-      
-      ## Questions
-        ### ${answers.github, answers.email}
-      
-    `;
+  ##  Description
+  ### ${description}
+        
+  ## Installation
+  ### ${installation}
+        
+  ## Usage
+  ### ${usage}
+        
+  ## License 
+  ### ${license}
+        
+  ## Contributions
+  ### ${contribution}
+        
+  ## Tests
+  ### ${tests}
+        
+  ## Questions
+  ### ${email}
+  ### ${github}
+        `;
 }
-
-// function to write README file
-function writeToFile(fileName, data) {
-
-}
-
-// function to initialize program
-createQuestions()
-  .then((answers) => writeFileAsync('../README.md', generateMarkdown(answers)))
-  .then(() => console.log('Successfully written to ../README.md'))
-  .catch((err) => console.error(err));
-
-// function call to initialize program
-writeToFile();
-generateReadMe();
-module.exports = index
