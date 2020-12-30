@@ -90,3 +90,9 @@ let createMd = (title, description, installation, usage, license, contribution, 
   ### ${github}
         `;
 }
+
+inquirer
+  .prompt(questions)
+  .then(answers => {
+
+  }
