@@ -95,4 +95,8 @@ inquirer
   .prompt(questions)
   .then(answers => {
 
+    fs.writeFile('README.md', template, (err) => {
+      if (err) throw err;
+      console.log('file has been saved');
+    });
   }
