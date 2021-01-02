@@ -10,7 +10,7 @@
 
   ##  Description
    This application features a ReadMe generator that allows developers to easily write a properly formatted ReadMe to their GitHub.
-   ![ReadMeGif](/readMeGeneratorGif.gif)
+   [!ReadMeGif](../readMeGeneratorGif.gif)
   ## Installation
    No additional packages are needed to install
         
