@@ -27,11 +27,11 @@ I personally used my ReadMe generator to generate this readme attached to my fil
 
 ## License
 
-No licenses to include
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ## Contributions
-
-Calvin Carter, Christina Romero, Tyler Bolty
+Calvin Carter, Tyler Bolty, Christina Romero
+ 
 
 ## Tests
 
