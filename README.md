@@ -2,17 +2,6 @@
 
 ## Table of Contents
 
-<<<<<<< HEAD
-    1. [Description](#description)
-    2. Installation
-    3. Usage
-    4. License
-    5. Contribution
-    6. Tests
-    7. Questions
-
-## Description
-=======
  * [Description](#description)
  * [Installation](#installation)
  * [Usage](#usage)
@@ -20,11 +9,8 @@
  * [Contributions](#contributions)
  * [Tests](#tests)
  * [Questions](#questions)
- 
-    
-# Description
->>>>>>> 2f58e12f10c53cefc73d42911dd48fbe2886a4e3
 
+## Description 
 This application features a ReadMe generator that allows developers to easily write a properly formatted ReadMe to their GitHub.
 
 ![ReadMe Demo](./readMeGeneratorGif.gif)
