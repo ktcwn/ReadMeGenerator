@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+<<<<<<< HEAD
     1. [Description](#description)
     2. Installation
     3. Usage
@@ -11,6 +12,18 @@
     7. Questions
 
 ## Description
+=======
+ * [Description](#description)
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [License](#license)
+ * [Contributions](#contributions)
+ * [Tests](#tests)
+ * [Questions](#questions)
+ 
+    
+# Description
+>>>>>>> 2f58e12f10c53cefc73d42911dd48fbe2886a4e3
 
 This application features a ReadMe generator that allows developers to easily write a properly formatted ReadMe to their GitHub.
 
@@ -26,11 +39,11 @@ I personally used my ReadMe generator to generate this readme attached to my fil
 
 ## License
 
-No licenses to include
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ## Contributions
-
-Calvin Carter, Christina Romero, Tyler Bolty
+Calvin Carter, Tyler Bolty, Christina Romero
+ 
 
 ## Tests
 
